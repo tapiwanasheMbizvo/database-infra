@@ -7,3 +7,5 @@ services:
     restart: always
     env_file:
       - postgres-db.env
+    ports:
+      - 5567:5432
