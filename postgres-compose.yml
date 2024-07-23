@@ -1,0 +1,9 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+services:
+  db:
+    container_name: book-api-db
+    image: postgres:12.19-alpine3.19
+    restart: always
+    env_file:
+      - postgres-db.env
