@@ -24,17 +24,19 @@ pipeline {
 
                 dir('src/k8s/storage'){
                     echo 'Creating pv and pvc for postgres db '
-                     sh 'kubectl apply -f $(ls *.yml) '
+                    sh 'sudo kubectl apply -f psql-pv.yml'
+                     sh 'sudo kubectl apply -f psql-claim.yml'
+
                 }
 
                 dir('src/k8s/service'){
                      echo 'Creating service for postgres db '
-                       sh 'kubectl apply -f postgres-service.yml'
+                       sh 'sudo kubectl apply -f postgres-service.yml'
                 }
 
                 dir('src/k8s/db'){
                 echo 'Deploying postgres deployment '
-                   sh 'kubectl apply -f postgres-service.yml '
+                   sh 'sudo kubectl apply -f postgres-service.yml '
 
                 }
             }
