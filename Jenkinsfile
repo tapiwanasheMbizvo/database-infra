@@ -18,7 +18,7 @@ pipeline {
                 //sh 'docker compose -f postgres-compose.yml up -d'
 
                 dir('src/k8s/config'){
-                     echo 'Running Docker Compose on config-map.yml'
+                     echo 'Running kubectl apply on config-map.yml'
                       sh 'kubectl apply -f postgres-configmap.yaml'
                 }
 
