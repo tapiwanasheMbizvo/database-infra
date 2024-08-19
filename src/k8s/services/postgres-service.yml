@@ -7,5 +7,5 @@ spec:
     app: bank-app
     tier: database
   ports:
-    - port: 55258
+    - port: 5432
       targetPort: 5432
