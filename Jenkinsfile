@@ -19,22 +19,22 @@ pipeline {
 
                 dir('src/k8s/config'){
                      echo 'Running kubectl apply on config-map.yml'
-                      sh 'kubectl apply -f postgres-configmap.yaml --validate=false'
+                      sh 'kubectl apply -f postgres-configmap.yml'
                 }
 
                 dir('src/k8s/storage'){
                     echo 'Creating pv and pvc for postgres db '
-                     sh 'kubectl apply -f $(ls *.yaml) '
+                     sh 'kubectl apply -f $(ls *.yml) '
                 }
 
                 dir('src/k8s/service'){
                      echo 'Creating service for postgres db '
-                       sh 'kubectl apply -f postgres-service.yaml'
+                       sh 'kubectl apply -f postgres-service.yml'
                 }
 
                 dir('src/k8s/db'){
                 echo 'Deploying postgres deployment '
-                   sh 'kubectl apply -f postgres-service.yaml '
+                   sh 'kubectl apply -f postgres-service.yml '
 
                 }
             }
