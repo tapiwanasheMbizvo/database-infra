@@ -6,6 +6,6 @@ metadata:
     tier: database
     app: bank-app
 data:
-  POSTGRES_DB: "bank_app_db"
+  POSTGRES_DB: "bank_app_db_test"
   POSTGRES_USER: "bank_app_user"
   POSTGRES_PASSWORD: "bank_app_pwd"
