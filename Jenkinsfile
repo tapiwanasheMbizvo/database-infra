@@ -29,14 +29,14 @@ pipeline {
 
                 }
 
-                dir('src/k8s/service'){
+                dir('src/k8s/services'){
                      echo 'Creating service for postgres db '
                        sh 'sudo kubectl apply -f postgres-service.yml'
                 }
 
                 dir('src/k8s/db'){
                 echo 'Deploying postgres deployment '
-                   sh 'sudo kubectl apply -f postgres-service.yml '
+                   sh 'sudo kubectl apply -f ps-deployment.yml '
 
                 }
             }
