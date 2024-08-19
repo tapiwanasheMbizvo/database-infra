@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service-bank-app
+spec:
+  selector:
+    app: bank-app
+    tier: database
+  ports:
+    - port: 55258
+      targetPort: 5433
