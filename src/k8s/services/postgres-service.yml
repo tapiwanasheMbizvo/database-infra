@@ -8,4 +8,4 @@ spec:
     tier: database
   ports:
     - port: 55258
-      targetPort: 5433
+      targetPort: 5432
