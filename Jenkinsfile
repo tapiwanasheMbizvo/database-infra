@@ -19,7 +19,7 @@ pipeline {
 
                 dir('src/k8s/config'){
                      echo 'Running kubectl apply on config-map.yml'
-                      sh 'kubectl apply -f postgres-configmap.yaml'
+                      sh 'kubectl apply -f postgres-configmap.yaml --validate=false'
                 }
 
                 dir('src/k8s/storage'){
