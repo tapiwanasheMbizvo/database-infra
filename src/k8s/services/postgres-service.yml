@@ -10,4 +10,4 @@ spec:
     - name: database-sentinel-port
       protocol: TCP
       port: 5433
-      targetPort: bank-app-database-port
+      targetPort: bank-database-port
