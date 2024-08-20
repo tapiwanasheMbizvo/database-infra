@@ -7,7 +7,7 @@ spec:
   selector:
     app: bank-app-database
   ports:
-    - name: database-sentinel-port
+    - name: db-svc-port
       protocol: TCP
       port: 5433
-      targetPort: bank-database-port
+      targetPort: app-db-prt

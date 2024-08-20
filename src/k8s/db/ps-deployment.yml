@@ -17,7 +17,7 @@ spec:
           image: 'postgres:12'
           imagePullPolicy: IfNotPresent
           ports:
-            - name: bank-database-port
+            - name: app-db-prt
               containerPort: 5432
           envFrom:
             - configMapRef:
