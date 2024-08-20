@@ -3,16 +3,14 @@ kind: Deployment
 metadata:
   name: postgres
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: bank-app
-      tier: database
+      app: bank-app-database
   template:
     metadata:
       labels:
-        app: bank-app
-        tier: database
+        app: bank-app-database
     spec:
       containers:
         - name: postgres
