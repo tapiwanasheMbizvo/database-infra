@@ -7,4 +7,7 @@ spec:
   selector:
     app: bank-app-database
   ports:
-    - port: 5432
+    - name: database-sentinel-port
+      protocol: TCP
+      port: 75175
+      targetPort: bank-app-database-port
